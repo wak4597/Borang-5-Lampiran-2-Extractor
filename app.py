@@ -265,7 +265,7 @@ def build_summary_doc(records):
 
 # --- Streamlit UI ---
 uploaded_files = st.file_uploader(
-    "Choose Word files",
+    "Choose Word files (only .docx!)",
     type=["docx"],
     accept_multiple_files=True
 )
@@ -287,6 +287,6 @@ if uploaded_files:
         st.download_button(
             label="📥 Download Extracted Summary (.docx)",
             data=output_buffer,
-            file_name="Extracted_Summary.docx",
+            file_name="Lampiran 2 Borang 5 raw.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         )

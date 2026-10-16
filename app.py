@@ -10,7 +10,7 @@ from docx.table import Table
 
 st.set_page_config(page_title="Document Extractor", page_icon="📄", layout="centered")
 
-st.title("📄 Word Document Data Extractor")
+st.title("📄 Borang 5 to Lampiran 2 Extractor")
 st.write("Upload your Word documents (.docx) below to extract data into a 2-column Word table.")
 
 def extract_field_data(doc):

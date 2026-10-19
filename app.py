@@ -86,8 +86,9 @@ def extract_field_data(doc):
                 
                 # Only trigger the regex if the row contains specific keywords
                 if "Ulasan Sekretariat:" in row_text or "Mencadangkan" in row_text:
+                    # UPDATED REGEX: Captures from "Mencadangkan" until the end of the line containing "Borang 6"
                     ulasan_match = re.search(
-                        r'(bagi[\s\S]*?Tarikh kelulusan Borang 6 bermula[^\n\r]*(?:\r?\n[^\n\r]+)*)',
+                        r'(Mencadangkan[\s\S]*?Borang 6[^\n\r]*(?:\r?\n[^\n\r]+)*)',
                         row_text,
                         re.IGNORECASE
                     )
